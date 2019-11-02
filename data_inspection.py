@@ -60,12 +60,14 @@ def convert_data_to_im(data):
 
 
 def ground_truth(data):
-    gt = data.to_numpy()[1:, 1]
-    for i in range(int(np.shape(data)[0])-1):
-        if gt[i]:
-            gt[i] = 1
-        else:
-            gt[i] = 0
+    """ Create label from data
+    Convert boolean from dataset to labels as the ground truth for machine
+    learning
+
+    :param data: DataFrame
+    :return: numpy array
+    """
+    gt = 1 * data.to_numpy()[:, 1]
     return gt
 
 
@@ -78,6 +80,4 @@ training = load("training.csv")
 
 # image = convert_data_to_im(training, interest_topics)
 G_T = ground_truth(training)
-print(type(G_T))
-print(G_T[0:5], G_T[5000: 5005])
-print(np.shape(G_T))
+
