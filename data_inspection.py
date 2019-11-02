@@ -22,7 +22,7 @@ def load(file):
 
 def convert_data_to_im(data):
     """ Convert dataset to image
-    Creating one image per user to represent their long and short term interest.
+    Creating 1 image per user to represent their long and short term interest.
     Rows: row 0 is the long term interest, row 1 is the short term interest
     Cols: # of col correspond to the topic_id
     Image dimension: # of user * 2 * # of topics
@@ -43,18 +43,24 @@ def convert_data_to_im(data):
 
         return max(max_c)
 
+    def fill_normalized_value(n, feature_name):
+        user_i = data.at[i, feature_name]
+        try:
+            w_norm = 1 / sum([float(x) for x in user_i])
+        except ZeroDivisionError:
+            return
+        for k in user_i.keys():
+            im[i, n, int(k) - 1] = w_norm * user_i[k]
+        return
+
     r = int(np.shape(data)[0])  # No. of users
     c_l = find_max_feature(r, 'ltiFeatures')
     c_s = find_max_feature(r, 'stiFeatures')
     im = np.zeros((r, 2, max(c_l, c_s)))
 
     for i in range(r):  # iterate users
-        user_lti = data.at[i, 'ltiFeatures']
-        user_sti = data.at[i, 'stiFeatures']
-        for k in user_lti.keys():
-            im[i, 0, int(k)-1] = user_lti[k]
-        for k in user_sti.keys():
-            im[i, 1, int(k)-1] = user_sti[k]
+        fill_normalized_value(0, 'ltiFeatures')
+        fill_normalized_value(1, 'stiFeatures')
 
     return im
 
@@ -73,11 +79,8 @@ def ground_truth(data):
 
 # load all data
 training = load("training.csv")
+validation = load("validation.csv")
+interest_topics = pd.read_csv("interest_topics.csv")
 
-# validation = load("validation.csv")
-# interest_topics = pd.read_csv("interest_topics.csv")
-
-
-# image = convert_data_to_im(training, interest_topics)
+image = convert_data_to_im(training)
 G_T = ground_truth(training)
-
