@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+import tensorflow as tf
 
 
 def load(file):
@@ -13,19 +15,40 @@ def load(file):
     return df
 
 
-def main():
-    # load all data
-    training = load("training.csv")
-    validation = load("validation.csv")
-    interest_topics = pd.read_csv("interest_topics.csv")
+def convert_data_to_im(data):
 
-    # inspect data
-    interest_topics.head()
+    def find_max_feature(user_n, ):
+        max_c = []
+        for i in range(user_n):
+            user_lti = data.at[i, 'ltiFeatures']
+            user_sti = data.at[i, 'stiFeatures']
+            c_l = max([int(i) for i in user_lti.keys()])
+            if user_sti != {}:
+                c_s = max([int(i) for i in user_sti.keys()])
+            else:
+                c_s = 0
+            max_c.append(max(c_l, c_s))
+            c = max(max_c)
+        return c
 
-    training.head()
+    r = int(np.shape(data)[0])  # No. of users
+    c = find_max_feature()
+    im = np.zeros((r, 2, c))
+    for i in range(r):  # iterate users
+        user_lti = data.at[i, 'ltiFeatures']
+        user_sti = data.at[i, 'stiFeatures']
+        for k in user_lti.keys():
+            im[i, 0, int(k)-1] = user_lti[k]
+        for k in user_sti.keys():
+            im[i, 1, int(k)-1] = user_sti[k]
+    return im
 
-    validation.head()
 
+# load all data
+training = load("training.csv")
+# validation = load("validation.csv")
+interest_topics = pd.read_csv("interest_topics.csv")
 
-if __name__ == "__main__":
-    main()
+image = convert_data_to_im(training, interest_topics)
+print(type(image))
+print(np.shape(image))
