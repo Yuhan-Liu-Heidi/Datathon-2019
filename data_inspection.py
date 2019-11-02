@@ -1,6 +1,8 @@
+import pandas as pd
+
+
 def load(file):
 
-    import pandas as pd
     import ast
     df = pd.read_csv(file)
 
