@@ -1,5 +1,27 @@
-# Datathon 2019 -- Predicting Rare Events
-## Findings
+# Datathon/HackDuke 2019 -- Predicting Rare Events
+
+## General Background and Applications
+This project is based on 3 sets of data provided by Valassis which
+contain various user and customer actions (details in **Data** section).
+With a goal of identifying shoppers who are more likely to respond to
+digital advertising and thus help companies to wisely spend limited
+marketing dollars, we developed two methods described below to analyze
+these data.
+
+These two methods/programs can be used for different data sets and
+different purposes to obtain useful information about target groups. For
+example, with course selection data for undergraduate or master students
+and whether they decided to pursue PhD, our programs will be able to
+train am algorithm to predict PhD pursuing rate based on student
+courses, and also show which courses may have the most effect on the
+student's decision. This can also be used for non-profit organizations
+such as science museums to predict interest of a new exhibit for certain
+groups of patrons etc.
+
+Required format for data sets and code to modify to run this program for
+a different purpose is described [HERE]().
+
+## Findings with given data from Valassis
 ![loss](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/loss_accuracy.png) ![accuracy](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/test_accuracy.png) ![weight](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/ex_interest_weight.png) ![bar graph](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/LikelyAudience.png)
 
 More details below
@@ -23,7 +45,8 @@ conversion events are extremely rare.
 
 ### Data
 Provided by Valassis, a leader in marketing technology and consumer
-engagement. More details in [data description](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/data_description.docx).
+engagement. More details in
+[data description](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/data_description.docx).
 
 ## Methods 
 ### 1. Convert with minimal false alarm
