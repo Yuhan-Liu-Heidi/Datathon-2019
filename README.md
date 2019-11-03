@@ -1,6 +1,6 @@
 # Datathon 2019 -- Predicting Rare Events
 ## Findings
-![]() ![]() ![]() ![]()
+![]() ![]() ![]() ![bar graph](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/LikelyAudience.png)
 
 More details below
 ## Background
