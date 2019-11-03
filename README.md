@@ -113,7 +113,7 @@ interested in computers & electronics were converted, and more than 50%
 of customers with most interest in autos & vehicles, science, and real
 estate were converted.
 
-![]()
+![bar graph](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/LikelyAudience.png)
 
 #### Conclusion:
 It can be concluded with some uncertainty (due to difference in sample
