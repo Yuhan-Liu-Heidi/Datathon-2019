@@ -23,7 +23,7 @@ conversion events are extremely rare.
 
 ### Data
 Provided by Valassis, a leader in marketing technology and consumer
-engagement. More details in [data description]().
+engagement. More details in [data description](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/data_description.docx).
 
 ## Methods 
 ### 1. Convert with minimal false alarm
