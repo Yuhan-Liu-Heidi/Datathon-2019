@@ -19,7 +19,7 @@ such as science museums to predict interest of a new exhibit for certain
 groups of patrons etc.
 
 Required format for data sets and code to modify to run this program for
-a different purpose is described [HERE]().
+a different purpose is described [HERE](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/datafile_requirements.md).
 
 ## Findings with given data from Valassis
 ![loss](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/loss_accuracy.png) ![accuracy](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/test_accuracy.png) ![weight](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/ex_interest_weight.png) ![bar graph](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/LikelyAudience.png)
