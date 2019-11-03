@@ -28,6 +28,7 @@ engagement. More details in [data description](https://github.com/Yuhan-Liu-Heid
 ## Methods 
 ### 1. Convert with minimal false alarm
 #### Introduction
+**File**: [data_inspection.py](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/data_inspection.py), [neural network](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/datathon.ipynb)
 **Question**: Will this shopper convert with minimal false alarm?
 
 **Importance**: With a given shopper and their interest profile, this
