@@ -79,7 +79,7 @@ interest features for.
 
 ### 2. Convert rate within category
 #### Introduction
-**File**: [customer_analysis.py]()
+**File**: [customer_analysis.py](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/customer_analysis.py)
 
 **Question**: Which category of shoppers are more likely to convert?
 
