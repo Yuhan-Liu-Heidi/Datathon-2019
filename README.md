@@ -1,6 +1,6 @@
 # Datathon 2019 -- Predicting Rare Events
 ## Findings
-![]() ![]() ![]() ![bar graph](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/LikelyAudience.png)
+![loss](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/loss_accuracy.png) ![accuracy](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/test_accuracy.png) ![weight](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/ex_interest_weight.png) ![bar graph](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/LikelyAudience.png)
 
 More details below
 ## Background
@@ -59,8 +59,8 @@ the testing set while the rest serve as the training set. This process
 is repeated until each fold of the 5 folds have been used as the testing
 set.
 
-![]()
-![]()
+![network](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/logic.png)
+![model architecture](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/model_arch.png)
 
 Model architecture is shown above.
 
@@ -68,8 +68,8 @@ Model architecture is shown above.
 Using the network created, within 4 layers, the loss on the 
 training/validation data set is down to 0.08, and the predicting 
 accuracy around 0.984.
-![]()
-![]()
+![loss](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/loss_accuracy.png)
+![accuracy](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/test_accuracy.png)
 
 #### Conclusion:
 Using this algorithm, the marketing person can predict, with around 98% 
@@ -96,7 +96,7 @@ Entertainment/Performing Arts → category: Arts & Entertainment). For
 each shopper, sum their interest for each category, and the category
 with the highest sum will be this shopper’s assigned category.
 
-![]()
+![weight](https://github.com/Yuhan-Liu-Heidi/Datathon-2019/blob/master/ex_interest_weight.png)
 
 This is an example of interest weight for one customer. The customer is
 assigned to Real Estate.
